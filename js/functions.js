@@ -132,11 +132,10 @@ function searchVacations(){
        }
     }
     fadeOut(document.getElementById('search-data'));
-    
     document.getElementById('search-data').innerHTML='';
     for(let i=0; i<resultado.length; i++){
         document.getElementById('search-data').innerHTML+='<div class="p-3 col-sm-12 col-md-4 col-lg-3 col-xl-3">'+
-                '<div class="card m-0 p-0 bgColorBlanco shadow-sm">'+
+                '<div class="card m-0 p-0 bgColorBlanco shadow-sm josh-js" data-josh-anim-name="fadeInUp">'+
                    '<div class="card-top">'+
                        '<img src="'+resultado[i].img_portada+'" class="card-img-top img-fluid" alt="">'+ 
                       '<span class="p-2 price bgColorBlanco color1 font-bold">'+resultado[i].price+'</span>'+
