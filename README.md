@@ -1,2 +1,2 @@
 # travel-landing-page
-Exanmple landing page for travel agency
+Example landing page for travel agency
