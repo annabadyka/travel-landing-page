@@ -1,0 +1,22 @@
+/*fuentes*/
+@font-face {
+    font-family: FontRegular;
+    src: url(../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf);
+}
+@font-face {
+    font-family: FontBold;
+    src: url(../fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf);
+}
+
+$fontSizeIni: 16px;
+$fontSizeDefault: 1.25rem;
+
+/*colores*/
+$color1: #21C9A5;
+$color2: #162232;
+$color3: #656361;
+$colorBlanco: #fff;
+$colorNegro: #333333;
+
+$color2_transparent: rgba(22, 34, 50, 0.1);
+@mixin font-bold{font-family: FontBold;}
