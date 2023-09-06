@@ -36,15 +36,21 @@ a{
 /*HEADER*/
     #cont_img_header{
            width:100%;
-           height:80vh;
+           /*height:80vh;*/
+           height:auto;
            background: url('../imgs/img_header_1.jpg');
            background-repeat:no-repeat;
            background-size:cover;
-           @media (min-width: 767px) {height:100vh;}
     }
     
     #home{
-        height:80%;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        @media (min-width: 992px) {
+            padding-top:7rem;
+            padding-bottom:7rem;
+        }
+
      } 
     .header_gallery_cntrl{
         div{
@@ -142,8 +148,8 @@ button, a{
     }    
 }
 #barra-menu .navbar-toggler {
-    color: $color2;;
-    border-color:$color2;
+    color: $colorBlanco;
+    border-color: $colorBlanco;
 }
 .card{
     border:none;
@@ -189,7 +195,7 @@ button, a{
     color:$color1;
     &:hover{color: $color2;cursor:pointer;}
 }
-.bi-list{color: $color2;width:40px; height:40px;}
+.bi-list{color: $colorBlanco;width:40px; height:40px;}
 
 .bi-star, .bi-star-fill{
     width:20px; height:20px;
