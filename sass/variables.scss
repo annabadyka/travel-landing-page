@@ -20,3 +20,6 @@ $colorNegro: #333333;
 
 $color2_transparent: rgba(22, 34, 50, 0.1);
 @mixin font-bold{font-family: FontBold;}
+@mixin transition1{transition: all 0.5s ease;}
+@mixin transition2{transition: opacity .15s linear;}
+@mixin transition3{transition: opacity .15s ease-in-out;}

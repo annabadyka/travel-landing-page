@@ -140,9 +140,27 @@ a:hover {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 4px;
 }
 
+.header_thumbs_imgs div {
+  border: 4px solid #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 1px;
+  transition: all 0.5s ease;
+}
+
+.header_thumbs_imgs div.active, .header_thumbs_imgs div:hover {
+  border: 4px solid #162232;
+}
+
 .header_thumbs_imgs img {
   object-fit: cover;
   width: 100%;
+  transition: all 0.5s ease;
+}
+
+.header_thumbs_imgs div:hover img {
+  opacity: 1;
 }
 
 #cont-all-header {
@@ -156,6 +174,7 @@ button.btn-primary, a.btn-primary {
   color: #fff;
   border-radius: 0;
   text-align: center;
+  transition: all 0.5s ease;
 }
 button.btn-primary:link, a.btn-primary:link {
   background-color: #21C9A5;
@@ -207,6 +226,7 @@ button.btn-primary:active, a.btn-primary:active {
 .navbar-nav .nav-link {
   color: #162232;
   font-size: 1.375rem;
+  transition: all 0.5s ease;
 }
 @media (min-width: 767px) {
   .navbar-nav .nav-link {
@@ -258,6 +278,7 @@ button.btn-primary:active, a.btn-primary:active {
   width: 100%;
   height: 100%;
   color: transparent;
+  transition: all 0.5s ease;
 }
 .social-links:hover {
   color: transparent;
@@ -308,6 +329,7 @@ button.btn-primary:active, a.btn-primary:active {
   width: 20px;
   height: 20px;
   color: #fff;
+  transition: all 0.5s ease;
 }
 .bi-instagram:hover, .bi-facebook:hover, .bi-twitter:hover {
   cursor: pointer;
@@ -318,6 +340,7 @@ button.btn-primary:active, a.btn-primary:active {
   color: #21C9A5;
   width: 50px;
   height: 50px;
+  transition: all 0.5s ease;
 }
 .bi-arrow-up-circle-fill:hover {
   color: #656361;
@@ -364,6 +387,7 @@ blockquote span {
 
 #testim_cntrl_left[data-allow-click="1"], #testim_cntrl_right[data-allow-click="1"] {
   opacity: 1;
+  transition: all 0.5s ease;
 }
 #testim_cntrl_left[data-allow-click="1"]:hover, #testim_cntrl_right[data-allow-click="1"]:hover {
   cursor: pointer;
@@ -458,25 +482,31 @@ footer #to_top {
 }
 
 /*loader*/
-#loader {
+.loading_container {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
   height: 100%;
   width: 100%;
-  text-align: center;
   z-index: 1030;
 }
-#loader div {
-  position: relative;
-  top: 45%;
-  left: 0%;
+.loading_container .loading {
+  width: 70px;
+  height: 70px;
+  border: 5px solid #21C9A5;
+  border-bottom-color: #162232;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
-#loader div span {
-  display: block;
-  width: 100%;
-  text-align: center;
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

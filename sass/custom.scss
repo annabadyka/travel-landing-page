@@ -16,16 +16,26 @@ body {
 
 h1, h2,h3{color:$colorNegro;}
 
-.show_img{opacity:1; background-color:transparent; transition: opacity .15s linear;cursor:default;}
-.hide_img{opacity:0.5; background-color:$colorBlanco; transition: opacity .15s linear;cursor:pointer;}
-.fadeIn{opacity:1; transition: opacity .15s ease-in-out;}
-.fadeOut{opacity:0;transition: opacity .15s ease-in-out;}
+.show_img{opacity:1; background-color:transparent; @include transition2; cursor:default;}
+
+.hide_img{opacity:0.5; background-color:$colorBlanco; @include transition2;cursor:pointer;}
+
+.fadeIn{opacity:1;@include transition3; }
+
+.fadeOut{opacity:0;@include transition3;}
+
 .color1{color: $color1;}
+
 .color2{color: $color2;}
+
 .color3{color: $color3;}
+
 .colorBlanco{color: $colorBlanco;}
+
 .bgColor2{background-color: $color2;}
+
 .bgColorNegro{background-color: $colorNegro;}
+
 .bgColorBlanco{background-color: $colorBlanco;}
 
 ::selection{background-color:$color1;}
@@ -82,16 +92,37 @@ a{
 .shadow-sm-white{
     box-shadow: rgba(255,255,255,.5) 0px 1px 4px;
 }
-.header_thumbs_imgs img{object-fit: cover; width:100%; }
+
+.header_thumbs_imgs div{
+    border: 4px solid $colorBlanco;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 1px;   
+    @include transition1; 
+}
+
+.header_thumbs_imgs div.active, .header_thumbs_imgs div:hover{
+    border: 4px solid $color2;
+}
+
+.header_thumbs_imgs img{object-fit: cover; width:100%; @include transition1; }
+
+.header_thumbs_imgs div:hover img{opacity:1; }
 
 #cont-all-header{
     border-bottom: 1px solid $colorBlanco;
 }
 
- 
 button, a{
     &.btn-primary{
-        font-size: $fontSizeDefault; background-color:$color1;border:1px solid $color1; color: $colorBlanco;border-radius:0;text-align:center;
+        font-size: $fontSizeDefault; 
+        background-color:$color1;
+        border:1px solid $color1; 
+        color: $colorBlanco;
+        border-radius:0;
+        text-align:center;
+        @include transition1; 
          &:link{
             background-color:$color1;border:1px solid $color1; color: $colorBlanco;
         }
@@ -137,6 +168,7 @@ button, a{
             @include font-bold;
         }
         font-size: $fontSizeDefault * 1.1; 
+        @include transition1; 
         &.active, &:hover{
             text-decoration: underline;
             text-underline-offset: .5rem;
@@ -178,6 +210,7 @@ button, a{
     width:100%; 
     height:100%; 
     color:transparent;
+    @include transition1; 
     &:hover{
         color:transparent;
         cursor:pointer;
@@ -209,12 +242,14 @@ button, a{
 .bi-instagram, .bi-facebook, .bi-twitter{
     width:20px; height:20px;
     color: $colorBlanco;
+    @include transition1; 
     &:hover{cursor:pointer;color:$color1;}
 }
 .bi-arrow-up-circle-fill{
     color:$color1;
     width:50px; 
-    height:50px;    
+    height:50px; 
+    @include transition1;  
     &:hover{
         color:$color3;
     }    
@@ -255,6 +290,7 @@ blockquote{
 
 #testim_cntrl_left[data-allow-click="1"], #testim_cntrl_right[data-allow-click="1"]{
     opacity:1;
+    @include transition1; 
     &:hover{cursor:pointer;}
 }
 #testim_cntrl_left[data-allow-click="0"], #testim_cntrl_right[data-allow-click="0"]{
@@ -317,25 +353,31 @@ footer{
 }
 
 /*loader*/
-#loader{
+.loading_container{
 	position: fixed;
 	top:0; 
 	left:0; 
 	background-color: $colorBlanco;
 	height: 100%;
 	width:100%;
-	text-align:center;
     z-index: 1030; 
-
-    div{
-      position: relative;
-      top: 45%;
-      left:0%; 
-        
-        span{
-            display:block;
-            width:100%;
-            text-align:center;
+    
+    .loading{
+        width: 70px;
+        height: 70px;
+        border: 5px solid $color1;
+        border-bottom-color:$color2;
+        border-radius: 50%;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+    
+      @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
         }
-    }
+        100% {
+            transform: rotate(360deg);
+        }
+      }
 }
