@@ -44,7 +44,7 @@ function changeImgsHeader(dir){
     }else{
         document.getElementById('header_gallery_cntrl_left').setAttribute('data-allow-click', '1');
     }
-  document.getElementById('cont_img_header').style.backgroundImage='url("imgs/img_header_'+cur_img_header+'.jpg")';
+  document.getElementById('cont_img_header').style.backgroundImage='linear-gradient(to left, rgba(255,0,0,0), rgba(22, 34, 50, 0.5)), url("imgs/img_header_'+cur_img_header+'.jpg")';
   
   fadeIn(document.getElementById("cont_img_header"));
     

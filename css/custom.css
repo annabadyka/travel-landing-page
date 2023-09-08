@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #333333;
+  color: #162232;
 }
 
 .show_img {
@@ -72,11 +72,15 @@ h1, h2, h3 {
 }
 
 .bgColorNegro {
-  background-color: #333333;
+  background-color: #162232;
 }
 
 .bgColorBlanco {
   background-color: #fff;
+}
+
+.font-bold {
+  font-family: FontBold;
 }
 
 ::selection {
@@ -90,9 +94,8 @@ a:hover {
 /*HEADER*/
 #cont_img_header {
   width: 100%;
-  /*height:80vh;*/
   height: auto;
-  background: url("../imgs/img_header_1.jpg");
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(22, 34, 50, 0.5)), url("../imgs/img_header_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -103,8 +106,14 @@ a:hover {
 }
 @media (min-width: 992px) {
   #home {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  #home {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -136,10 +145,6 @@ a:hover {
   cursor: default;
 }
 
-.shadow-sm-white {
-  box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 4px;
-}
-
 .header_thumbs_imgs div {
   border: 4px solid #fff;
   box-sizing: border-box;
@@ -165,6 +170,24 @@ a:hover {
 
 #cont-all-header {
   border-bottom: 1px solid #fff;
+}
+
+.slogan-header {
+  font-size: 1.25rem;
+}
+@media (min-width: 575px) {
+  .slogan-header {
+    font-size: 1.625rem;
+  }
+}
+
+.text-header {
+  font-size: 0.875rem;
+}
+@media (min-width: 575px) {
+  .text-header {
+    font-size: 1.25rem;
+  }
 }
 
 button.btn-primary, a.btn-primary {
